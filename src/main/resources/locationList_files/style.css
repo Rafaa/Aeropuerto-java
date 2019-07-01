@@ -1,0 +1,410 @@
+*{
+	font-size: 12px;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+
+h1{
+	font-size: 18px;
+}
+
+body{
+	background-image:url('lib/fond_motif_site.gif');
+	margin: 10px;
+	background-color:#FFFFFF;
+}
+
+.decale{
+	padding-left : 10px;
+}
+
+.bordure_point{
+	border-top: 1px dotted #CCCCCC;
+}
+
+tr.over:hover{
+	background: url('lib/bg_over.gif');
+	background-repeat: repeat-x;
+}
+
+/* STYLES DU TEXTE */
+.rubrique{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.alerte{
+	font-weight: bold;
+	color: #CC0000;
+}
+
+.alerte_big{
+	font-size: 18px;
+	font-weight: bold;
+	color: #CC0000;
+}
+
+.ariane{
+	font-size: 15px;
+	font-weight: bold;
+	color: #CC0000;
+}
+
+.mini{
+	font-size: 9px;
+}
+
+/* STYLES DES LIENS */
+
+a{
+	color: #0B4B7E;
+	text-decoration: underline;
+}
+
+a:hover{
+	color: #FF6D00;
+	text-decoration: underline;
+}
+
+a.titre{
+	color: #0B4B7E;
+	text-decoration: underline;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+a.titre:hover{
+	color: #FF6D00;
+	text-decoration: underline;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+a.rubrique{
+	color: #0B4B7E;
+	text-decoration: underline;
+}
+
+a.rubrique:hover{
+	color: #FF6D00;
+	text-decoration: underline;
+}
+
+a.ariane{
+	color: #0B4B7E;
+	text-decoration: underline;
+}
+
+a.ariane:hover{
+	color: #FF6D00;
+	text-decoration: underline;
+}
+
+.border_gris{
+	border: 1px solid #D5D5D5;
+	/* border-collapse: collapse; */
+}
+
+/* style BLEU */
+.titre_bleu{
+	background-image: url('lib/bg_bleu.gif');
+	color: #FFFFFF;
+}
+
+.border_bleu{
+	border: 1px solid #0B4B7E;
+	/* border-collapse: collapse; */
+	background-color:#FFFFFF;
+}
+
+.bouton_bleu{
+	color: #FFFFFF;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-weight: bold;
+	border: 1px solid #0B4B7E;
+	background-color: #FFFFFF;
+	background-image: url('lib/bouton_bleu.gif');
+	background-repeat: repeat-x;
+	background-position: center;
+}
+
+/* style VERT */
+.titre_vert{
+	background-image: url('lib/bg_vert.gif');
+	color: #FFFFFF;
+}
+
+.border_vert{
+	border: 1px solid #008009;
+	/* border-collapse: collapse; */
+	background-color: #ebfced;
+}
+
+.bouton_vert{
+	color: #FFFFFF;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-weight: bold;
+	border: 1px solid #008009;
+	background-color: #FFFFFF;
+	background-image: url('lib/bouton_vert.gif');
+	background-repeat: repeat-x;
+	background-position: center;
+}
+
+.bouton_vert2{
+	color: #FFFFFF;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-weight: bold;
+	border: 1px solid #008009;
+	background-color: #FFFFFF;
+	background-image: url('lib/bouton_vert2.gif');
+	background-repeat: repeat-x;
+	background-position: center;
+}
+
+/* style ORANGE */
+.titre_orange{
+	background-image: url('lib/bg_orange.gif');
+	color: #FFFFFF;
+}
+
+.border_orange{
+	border: 1px solid #FF6D00;
+	/* border-collapse: collapse; */
+	background-color: #fff3e4;
+}
+
+.bouton_orange{
+	color: #FFFFFF;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-weight: bold;
+	border: 1px solid #FF6D00;
+	background-color: #FFFFFF;
+	background-image: url('lib/bouton_orange.gif');
+	background-repeat: repeat-x;
+	background-position: center;
+}
+
+.highslide {
+	cursor: url(https://www.cybevasion.fr/javascript/highslide/graphics/zoomin.cur), pointer;
+	outline: none;
+}
+.highslide img {
+	border: 3px solid #FFFFFF;
+}
+.highslide:hover img {
+	border: 3px solid #FFFFFF;
+}
+
+.highslide-image {
+	border: 0;
+}
+.highslide-image-blur {
+}
+.highslide-caption {
+    display: none;
+    border: 5px solid white;
+    border-top: none;
+    padding: 5px;
+    background-color: white;
+}
+
+.highslide-outline { 
+	background-color: white; 
+}
+
+.highslide-loading {
+    display: block;
+	color: white;
+	font-size: 9px;
+	font-weight: bold;
+	text-transform: uppercase;
+    text-decoration: none;
+	padding: 3px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+    background-color: black;
+    padding-left: 22px;
+    background-image: url(https://www.cybevasion.fr/javascript/highslide/graphics/loader.gif);
+    background-repeat: no-repeat;
+    background-position: 3px 1px;
+}
+a.highslide-credits,
+a.highslide-credits i {
+    padding: 2px;
+    color: silver;
+    text-decoration: none;
+	font-size: 10px;
+}
+a.highslide-credits:hover,
+a.highslide-credits:hover i {
+    color: white;
+    background-color: gray;
+}
+
+.highslide-move {
+    cursor: move;
+}
+.highslide-overlay {
+	display: none;
+}
+
+.highslide-display-block {
+    display: block;
+}
+.highslide-display-none {
+    display: none;
+}
+
+.highslide-controls {
+	width: 195px;
+	height: 40px;
+	background: url(https://www.cybevasion.fr/javascript/highslide/graphics/controlbar-black-border.gif) 0 -90px no-repeat;
+	margin-right: 15px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+.highslide-controls ul {
+	position: relative;
+	left: 15px;
+	height: 40px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background: url(https://www.cybevasion.fr/javascript/highslide/graphics/controlbar-black-border.gif) right -90px no-repeat;
+}
+.highslide-controls li {
+	float: left;
+	padding: 5px 0;
+}
+.highslide-controls a {
+	background: url(https://www.cybevasion.fr/javascript/highslide/graphics/controlbar-black-border.gif);
+	display: block;
+	float: left;
+	height: 30px;
+	width: 30px;
+	outline: none;
+}
+.highslide-controls a.disabled {
+	cursor: default;
+}
+.highslide-controls a span {
+	/* hide the text for these graphic buttons */
+	display: none;
+}
+
+/* The CSS sprites for the controlbar */
+.highslide-controls .highslide-previous a {
+	background-position: 0 0;
+}
+.highslide-controls .highslide-previous a:hover {
+	background-position: 0 -30px;
+}
+.highslide-controls .highslide-previous a.disabled {
+	background-position: 0 -60px !important;
+}
+.highslide-controls .highslide-play a {
+	background-position: -30px 0;
+}
+.highslide-controls .highslide-play a:hover {
+	background-position: -30px -30px;
+}
+.highslide-controls .highslide-play a.disabled {
+	background-position: -30px -60px !important;
+}
+.highslide-controls .highslide-pause a {
+	background-position: -60px 0;
+}
+.highslide-controls .highslide-pause a:hover {
+	background-position: -60px -30px;
+}
+.highslide-controls .highslide-next a {
+	background-position: -90px 0;
+}
+.highslide-controls .highslide-next a:hover {
+	background-position: -90px -30px;
+}
+.highslide-controls .highslide-next a.disabled {
+	background-position: -90px -60px !important;
+}
+.highslide-controls .highslide-move a {
+	background-position: -120px 0;
+}
+.highslide-controls .highslide-move a:hover {
+	background-position: -120px -30px;
+}
+.highslide-controls .highslide-full-expand a {
+	background-position: -150px 0;
+}
+.highslide-controls .highslide-full-expand a:hover {
+	background-position: -150px -30px;
+}
+.highslide-controls .highslide-full-expand a.disabled {
+	background-position: -150px -60px !important;
+}
+.highslide-controls .highslide-close a {
+	background-position: -180px 0;
+}
+.highslide-controls .highslide-close a:hover {
+	background-position: -180px -30px;
+}
+
+.highslide-dimming {
+	background: black;
+}
+
+.highslide-maincontent {
+	display: none;
+}
+.highslide-html {
+	background-color: white;
+}
+.highslide-html-content {
+	display: none;
+	width: 400px;
+	padding: 0 5px 5px 5px;
+}
+.highslide-header {
+	padding-bottom: 5px;
+}
+.highslide-header ul {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+.highslide-header ul li {
+	display: inline;
+	padding-left: 1em;
+}
+.highslide-header ul li.highslide-previous, .highslide-header ul li.highslide-next {
+	display: none;
+}
+.highslide-header a {
+	font-weight: bold;
+	color: gray;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.highslide-header a:hover {
+	color: black;
+}
+.highslide-header .highslide-move a {
+	cursor: move;
+}
+.highslide-footer {
+	height: 11px;
+}
+.highslide-footer .highslide-resize {
+	float: right;
+	height: 11px;
+	width: 11px;
+	background: url(https://www.cybevasion.fr/javascript/highslide/graphics/resize.gif);
+}
+.highslide-body {
+}
+.highslide-resize {
+	cursor: nw-resize;
+}
