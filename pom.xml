@@ -32,6 +32,12 @@
         </dependency>
         <!-- end::tests[] -->
 
+        <dependency>
+            <groupId>net.ricecode</groupId>
+            <artifactId>string-similarity</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
 
 
         <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->

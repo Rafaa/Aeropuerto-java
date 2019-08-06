@@ -37,4 +37,12 @@ public class ParseVacController {
 
     }
 
+
+    @RequestMapping("/addCommune")
+    public String addCommune() {
+        parseLocationService.addCommune();
+        return "true";
+
+    }
+
 }

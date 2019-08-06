@@ -61,26 +61,35 @@ public class AirportParsedEntity implements Serializable {
     @Column(name = "acb")
     private String acb;
 
-
     @Column(name = "transports")
     private String transports;
 
     @Column(name = "hotels_restaurant")
     private String hotelsRestaurant;
 
-
     @Column(name = "public_air_traffic")
     private boolean publicAirTraffic;
-
-
 
     @Column(name = "clean_location")
     private String cleanLocation;
 
-
-
     @Column(name = "geo_location")
     private String geoLocation;
+
+    @OneToOne
+    @JoinColumn
+    private Commune commune;
+
+
+
+    public Commune getCommune() {
+        return commune;
+    }
+
+    public AirportParsedEntity setCommune(Commune commune) {
+        this.commune = commune;
+        return this;
+    }
 
     public String getGeoLocation() {
         return geoLocation;

@@ -19,7 +19,6 @@ public class searchService {
     @Autowired
     private AirportParsedDao airportParsedDao;
 
-    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping(value = "/searchAirports", consumes = {"application/JSON"}, produces = {"application/JSON"})
     public List<AirportParsedEntity> searchAirports(@RequestBody SearchForm searchForm) {
 
