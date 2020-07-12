@@ -29,5 +29,6 @@ public class GoogleSearchServiceTest {
     @Test
     public void googleSerchCallTest() {
         assertNotNull(googleSearchService.searchByPlaceName("LFPH"));
+        //assertEquals("77500 Chelles");
     }
 }

@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "edb8960d-feb4-411f-9343-2c6ae1694b4d",
+		"name": "Google API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "search LFPH",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=chelles le pin&inputtype=textquery&fields=place_id,photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyBWeO9S16SS37hV1UslW3fSHv5U_BSJrJY",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"findplacefromtext",
+						"json"
+					],
+					"query": [
+						{
+							"key": "input",
+							"value": "chelles le pin"
+						},
+						{
+							"key": "inputtype",
+							"value": "textquery"
+						},
+						{
+							"key": "fields",
+							"value": "place_id,photos,formatted_address,name,rating,opening_hours,geometry"
+						},
+						{
+							"key": "key",
+							"value": "AIzaSyBWeO9S16SS37hV1UslW3fSHv5U_BSJrJY"
+						},
+						{
+							"key": "referer",
+							"value": "postman",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "photo LFPH",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference=CmRaAAAAx3jyHUQ0-56gi5FW48r-CNXzWGmxapwCsdViK8QvkhO40GUjIaLeSDEhwO6xFZr9yxGP_-tXp0t8lK0JQ2vfc4hI_IVf0IrX8HWX2U9VrCXmAuVo3nPMuCpeh_S2yDLqEhDamshTD6gYWTcChDiCZghPGhQ9xBOcUuMnnWf-Qy02EDx3Ub4_zA&key=AIzaSyBWeO9S16SS37hV1UslW3fSHv5U_BSJrJY",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"photo"
+					],
+					"query": [
+						{
+							"key": "maxwidth",
+							"value": "200"
+						},
+						{
+							"key": "photoreference",
+							"value": "CmRaAAAAx3jyHUQ0-56gi5FW48r-CNXzWGmxapwCsdViK8QvkhO40GUjIaLeSDEhwO6xFZr9yxGP_-tXp0t8lK0JQ2vfc4hI_IVf0IrX8HWX2U9VrCXmAuVo3nPMuCpeh_S2yDLqEhDamshTD6gYWTcChDiCZghPGhQ9xBOcUuMnnWf-Qy02EDx3Ub4_zA"
+						},
+						{
+							"key": "key",
+							"value": "AIzaSyBWeO9S16SS37hV1UslW3fSHv5U_BSJrJY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "details LFPH",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJpxE5FTp-5kcRqt6u4ylr-9o&key=AIzaSyBWeO9S16SS37hV1UslW3fSHv5U_BSJrJY\n",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"details",
+						"json"
+					],
+					"query": [
+						{
+							"key": "placeid",
+							"value": "ChIJpxE5FTp-5kcRqt6u4ylr-9o"
+						},
+						{
+							"key": "fields",
+							"value": "name,rating,formatted_phone_number",
+							"disabled": true
+						},
+						{
+							"key": "key",
+							"value": "AIzaSyBWeO9S16SS37hV1UslW3fSHv5U_BSJrJY\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "accessToken",
+				"value": "ya29.GltyB-NVfB2XaHutD3fB7gHJ3bnioElQFVpzP8wFp1PL1MPNQ8LRgMqe6gPafS6YSQmsABGABq51tU4BN5mepEaktPSg-IH_0OzFwCZtbzeMnJbsDfXgFKkq23fA",
+				"type": "string"
+			},
+			{
+				"key": "tokenType",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	}
+}
