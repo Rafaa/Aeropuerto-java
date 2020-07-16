@@ -1,6 +1,7 @@
 package com.aero.service.google;
 
-import com.aero.models.google.search.GoogleSearch;
+
+import com.aero.models.google.details.GoogleDetails;
 import hello.Application;
 import org.junit.After;
 import org.junit.Before;
@@ -12,14 +13,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.net.URISyntaxException;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
-public class GoogleSearchServiceTest {
-
+public class GoogleDetailsServiceTest {
     @Autowired
-    private GoogleSearchService googleSearchService;
+    private GoogleDetailsService googleDetailsService;
 
     @Before
     public void setUp()  {
@@ -30,14 +30,13 @@ public class GoogleSearchServiceTest {
     }
 
     @Test
-    public void googleSerchCallTest() {
-        GoogleSearch gs = null;
+    public void googleDetailsCallTest() {
+        GoogleDetails gd = null;
         try {
-            gs = googleSearchService.searchByPlaceName("LFPH");
+            gd = googleDetailsService.detailsByPlaceId("LFPH");
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
-        assertNotNull(gs);
-        assertTrue(gs.getCandidates().get(0).getFormattedAddress().matches(".*77500 Chelles.*"));
+        assertNotNull(gd);
     }
 }
