@@ -1,5 +1,6 @@
 package com.aero.controller;
 
+import com.aero.service.AirportPhotosService;
 import com.aero.service.AirportsService;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.parser.PdfTextExtractor;
@@ -32,6 +33,16 @@ public class locationController {
 
     @Autowired
     AirportsService airportsService;
+
+    @Autowired
+    private AirportPhotosService airportPhotosService;
+
+
+    @RequestMapping("/updateAllAerodromeCoordinates")
+    public String updateAllAerodromeCoordinates() {
+        airportPhotosService.saveAllCoordinates();
+        return "Done !";
+    }
 
     @RequestMapping("/setLocation")
     public String index() {

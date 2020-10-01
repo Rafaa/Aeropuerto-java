@@ -1,6 +1,7 @@
 package com.aero.service;
 
 import com.aero.dao.AbstractDao;
+import com.aero.dao.AirportParsedDao;
 import com.aero.dao.GooglePhotoDao;
 import com.aero.models.AirportParsedEntity;
 import com.aero.models.google.details.GoogleDetails;
@@ -35,10 +36,34 @@ public class AirportPhotosService {
     @Autowired
     GooglePhotoDao googlePhotoDao;
 
+    @Autowired
+    AirportParsedDao airportParsedDao;
+
+
+
     public void saveAllPhotos()  {
         airportsService.getAirportParsedList().forEach(airport -> {
             try {
                 saveAllPhotosByAerodrome(airport);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+    public void saveAllCoordinates()  {
+        airportsService.getAirportParsedList().forEach(airport -> {
+            try {
+                GoogleSearch googleSearch = googleSearchService.searchByPlaceName(airport.getCodeOaci());
+                if(null != googleSearch.getCandidates()) {
+                    googleSearch.getCandidates().forEach(candidate -> {
+                        if(null != candidate.getGeometry()) {
+                            airport.setLat(candidate.getGeometry().getLocation().getLat());
+                            airport.setLng(candidate.getGeometry().getLocation().getLng());
+                            airportParsedDao.saveOrUpdate(airport);
+                        }
+                    });
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -3,6 +3,7 @@ package com.aero.models;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "Airport_parsed")
@@ -75,6 +76,12 @@ public class AirportParsedEntity implements Serializable {
 
     @Column(name = "geo_location")
     private String geoLocation;
+
+    @Column(name = "lat")
+    private BigDecimal lat;
+
+    @Column(name = "lng")
+    private BigDecimal lng;
 
     @OneToOne
     @JoinColumn
@@ -266,5 +273,23 @@ public class AirportParsedEntity implements Serializable {
 
     public void setCleanLocation(String cleanLocation) {
         this.cleanLocation = cleanLocation;
+    }
+
+    public BigDecimal getLat() {
+        return lat;
+    }
+
+    public AirportParsedEntity setLat(BigDecimal lat) {
+        this.lat = lat;
+        return this;
+    }
+
+    public BigDecimal getLng() {
+        return lng;
+    }
+
+    public AirportParsedEntity setLng(BigDecimal lng) {
+        this.lng = lng;
+        return this;
     }
 }
