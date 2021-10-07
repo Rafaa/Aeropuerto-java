@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URISyntaxException;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 @RestController
@@ -29,7 +31,10 @@ public class searchService {
     @PostMapping(value = "/searchAirports", consumes = {"application/JSON"}, produces = {"application/JSON"})
     public List<AirportParsedEntity> searchAirports(@RequestBody SearchForm searchForm) {
 
-        return airportsService.searchAirport(searchForm);
+        List<AirportParsedEntity> result = airportsService.searchAirport(searchForm);
+        result.sort((AirportParsedEntity a1, AirportParsedEntity a2)->a2.getCodeOaci().compareTo(a1.getCodeOaci()));
+
+        return result;
 
     }
 
